@@ -23,6 +23,8 @@ Vue.use(VueLazyload,{
   loading:require('./images/loading.gif')
 })
 
+import './css/common.css'
+import './js/common.js'
 
 //引入阿里巴巴矢量图标
 import './fonts/iconfont.css'

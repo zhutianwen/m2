@@ -97,6 +97,13 @@
       "unicode_decimal": 59155
     },
     {
+      "icon_id": "1314834",
+      "name": "多选",
+      "font_class": "duoxuan",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
       "icon_id": "1387974",
       "name": "退出",
       "font_class": "tuichu",
@@ -179,6 +186,13 @@
       "font_class": "caidan",
       "unicode": "e610",
       "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "3281711",
+      "name": "网易云",
+      "font_class": "wangyiyun",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
     },
     {
       "icon_id": "3400996",

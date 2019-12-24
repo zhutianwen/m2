@@ -7,7 +7,7 @@
         </van-swipe>
         <!--  -->
         <div class="fen-lei">
-            <div class="fen-lei-content">
+            <div class="fen-lei-content" @click="goRecommmond">
                 <i class="iconfont icon1 icon-meirituijian"></i>
                 <div class="fen-lei-title">每日推荐</div>
             </div>
@@ -25,11 +25,11 @@
             </div>  
         </div>
         <!--  -->
-        <div style="width:100%;color:#e7e9dd;border:0.5px solid;margin:20px 0 20px 0;"></div>
+        <div style="width:100%;color:#e7e9dd;border:0.02rem solid;margin:0.6rem 0 0.6rem 0;"></div>
         <!-- 推荐歌单 -->
         <div class="recommend-songs">
             <div class="recommend-title">
-                <div>推荐歌单</div>
+                <div class="tuijian-gedan">推荐歌单</div>
                 <div class="song-square">歌单广场</div>
             </div>
             <div class="recommend-items">
@@ -48,7 +48,7 @@
         <diV class="new-songs">
             <div class="new-songs-title">
                 <div>
-                    <span>新碟</span>
+                    <span class="xindie">新碟</span>
                     <span class="line">|</span>
                     <span class="newSong">新歌</span>
                 </div>
@@ -68,19 +68,24 @@
 
 <script>
 import Swiper from 'swiper'
+import { Toast } from 'vant';
 
 export default {
+    // mounted(){
+    //     this.$toast('为你推荐更多有趣的内容');
+    // },
     data(){
         return{
             bannerList:[],
             recommendLisr:[],
             newdieList:[],
+            tips:'为你推荐更多有趣的内容'
         }
     },
     created(){
         this.getBanner();
         this.getRecommend();
-        this. getNewsdie();
+        this.getNewsdie();
     },
     methods:{
          // 转换数字
@@ -126,6 +131,11 @@ export default {
             }).catch((err)=>{
                 console.log(err)
             })
+        },
+        goRecommmond(){
+            this.$router.push({
+                path:'/recommenday'
+            })
         }  
     }
 }
@@ -136,9 +146,17 @@ export default {
     img{
         width: 100%;
     }
+    .tips {
+        box-sizing: border-box;
+        padding: 0.1rem 0.2rem;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        font-size: 0.23rem;
+        border-radius: 0.3rem;
+    }
     .fen-lei-content{
         text-align: center;
-        margin-top:30px; 
+        margin-top:0.8rem; 
     }
     .fen-lei{
         display: flex;
@@ -147,17 +165,17 @@ export default {
     .icon1{
         display: block;
         color: #fff;
-        font-size: 30px;
+        font-size: 0.8rem;
         background: #e14235;
-        width: 45px;
-        height: 45px;
+        width: 1.5rem;
+        height: 1.5rem;
         border-radius: 50%;
         text-align: center;
-        line-height: 45px;
+        line-height: 1.5rem;
     }
     .fen-lei-title{
-        font-size: 13px;
-        margin-top: 10px;
+        font-size: 0.35rem;
+        margin-top: 0.35rem;
     }
     .recommend-title{
         display: flex;
@@ -165,28 +183,31 @@ export default {
     }
     .song-square,.more-die{
         width: 25%;
-        height: 20px;
-        letter-spacing: 2px;
+        height: 0.5rem;
+        letter-spacing: 0.1rem;
         text-align: center;
-        line-height: 20px;
-        font-size: 13px;
+        line-height: 0.5rem;
+        font-size: 0.35rem;
         border: 1px solid #e7e9dd;
         border-radius:15px; 
+    }
+    .tuijian-gedan,.xindie{
+        font-size: 0.45rem;
     }
     .recommend-items{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin-top: 15px;
+        margin-top: 0.5rem;
     }
     .recommend-div{
         width: 30%;
         text-align: center;
-        margin-bottom: 10px;
+        margin-bottom: 0.25rem;
         position: relative;
     }
     .recommend-span{
-        font-size: 12px;
+        font-size:0.2rem;
         position: absolute;
         top:0;
         right: 0;
@@ -199,7 +220,7 @@ export default {
         border-radius: 8px;
      }
     .description,.news-song-detail{
-        font-size: 12px;
+        font-size: 0.3rem;
         text-align: left;
        display: -webkit-box;
        -webkit-box-orient: vertical;
@@ -212,13 +233,14 @@ export default {
     }
     .line{
         color: #ccc;
+        font-size: 0.45rem;
     }
     .new-songs-title{
-        margin-top: 30px;
+        margin-top: 1rem;
     }
     .newSong{
         color: #ccc;
-        font-size: 13px;
+        font-size: 0.35rem;
     }
     .news-songs-div{
         width: 30%;
@@ -228,9 +250,10 @@ export default {
         border-radius: 8px;
     }
     .news-songs-item{
-        margin-top:15px; 
+        margin-top:0.28rem; 
         display: flex;
         justify-content: space-between;
     }
+
 </style>
 
