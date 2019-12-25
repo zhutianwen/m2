@@ -126,7 +126,7 @@ export default {
         },
         getNewsdie(){//获取新碟
             this.$axios.get('/top/album?offset=0&limit=3').then((res)=>{
-                console.log(res)
+                // console.log(res)
                 this.newdieList = res.data.albums
             }).catch((err)=>{
                 console.log(err)

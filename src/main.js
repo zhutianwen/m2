@@ -17,6 +17,8 @@ Vue.use(Vant);
 
 
 
+
+
 //引入vue 懒加载模块
 import VueLazyload from 'vue-lazyload'
 Vue.use(VueLazyload,{

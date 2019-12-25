@@ -10,6 +10,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "jquery": "^3.4.1",
     "lazyload": "^2.0.0-rc.2",
     "swiper": "^5.2.1",
     "vant": "^2.3.3",

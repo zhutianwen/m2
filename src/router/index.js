@@ -5,6 +5,7 @@ import index from '@/components/index'
 import recommenday from '@/views/recommenday'
 
 
+
 Vue.use(Router)
 
 export default new Router({
