@@ -48,20 +48,31 @@
         <diV class="new-songs">
             <div class="new-songs-title">
                 <div>
-                    <span class="xindie">新碟</span>
+                    <span :class="{active:shows==1}" class="newSong" @click="newdish">新碟</span>
                     <span class="line">|</span>
-                    <span class="newSong">新歌</span>
+                    <span :class="{active:shows==2}" class="newSong" @click="newsong">新歌</span>
                 </div>
-                <div class="more-die">
+                <div class="more-die" v-show="show" @click="goDish">
                     更多新碟
                 </div>  
+                <div class="more-die" v-show="hide">
+                    新歌推荐
+                </div>  
             </div>
-            <div class="news-songs-item">
+            <div class="news-songs-item" v-show="show">
                 <div class="news-songs-div" v-for="item in newdieList" :key="item.index">
                     <img v-lazy="item.picUrl" alt="">
                     <div class="news-song-detail">{{item.name}}</div>
                 </div>
             </div>
+             <div class="news-songs-item" v-show="hide">
+                <div class="news-songs-div" v-for="(item,index) in newsongList" :key="index" v-if="index<3">
+                    <img v-lazy="item.album.blurPicUrl" alt="">
+                    <span class="iconfont icon-icon-"></span>
+                    <div class="news-song-detail">{{item.name}}</div>
+                </div>
+            </div>
+
         </diV>
     </div>
 </template>
@@ -69,23 +80,27 @@
 <script>
 import Swiper from 'swiper'
 import { Toast } from 'vant';
+import $ from 'jquery'
+
 
 export default {
-    // mounted(){
-    //     this.$toast('为你推荐更多有趣的内容');
-    // },
     data(){
         return{
+            shows:1,
+            show:true,
+            hide:false,
             bannerList:[],
             recommendLisr:[],
             newdieList:[],
-            tips:'为你推荐更多有趣的内容'
+            newsongList:[],
+            
         }
     },
     created(){
         this.getBanner();
         this.getRecommend();
         this.getNewsdie();
+        this.getNewsong()
     },
     methods:{
          // 转换数字
@@ -130,6 +145,29 @@ export default {
                 this.newdieList = res.data.albums
             }).catch((err)=>{
                 console.log(err)
+            })
+        },
+        getNewsong(){//获取新歌
+            this.$axios.get('/top/song?type=7').then((res)=>{
+                this.newsongList = res.data.data
+                // console.log(this.newsongList[0].album.blurPicUrl,'//')
+            }).catch((err)=>{
+                console.log(err)
+            })
+        },
+        newdish(){
+            this.shows=1
+            this.show = true
+            this.hide = false
+        },
+        newsong(){
+            this.shows=2
+            this.show = false
+            this.hide = true
+        },
+        goDish(){
+            this.$router.push({
+                path:'/moreNewdish'
             })
         },
         goRecommmond(){
@@ -191,7 +229,7 @@ export default {
         border: 1px solid #e7e9dd;
         border-radius:15px; 
     }
-    .tuijian-gedan,.xindie{
+    .tuijian-gedan{
         font-size: 0.45rem;
     }
     .recommend-items{
@@ -238,11 +276,12 @@ export default {
     .new-songs-title{
         margin-top: 1rem;
     }
-    .newSong{
+    .newSong,.xindie{
         color: #ccc;
         font-size: 0.35rem;
     }
     .news-songs-div{
+        position: relative;
         width: 30%;
         text-align: center；
     }
@@ -253,7 +292,21 @@ export default {
         margin-top:0.28rem; 
         display: flex;
         justify-content: space-between;
+        margin-bottom:0.5rem;
+        height: 4rem;
     }
-
+    .active{
+        color: #000;
+        font-size: 0.45rem   
+    }
+    .icon-icon-{
+        position: absolute;
+        bottom: 1.3rem;
+        right: 0.2rem;
+        font-size: 0.6rem;
+        color: #fff;
+        text-shadow: 3px 3px 3px #141313;
+        
+    }
 </style>
 
