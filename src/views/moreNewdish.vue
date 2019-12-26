@@ -74,10 +74,15 @@ export default {
         margin: 0 auto;     
     }
     .dish-top{
-        width: 90%;
-        margin: 0 auto;     
+        width: 100%;
+        margin: 0 auto; 
+        position: fixed;
+        top: 0;   
+        background: #fff; 
+        height: 1rem;
     }
     .icon-zuojiantou{
+        padding-left:0.5rem; 
         font-size: 0.7rem;
     }
     .dish-top-title{
@@ -86,7 +91,7 @@ export default {
     .digital-album{
         width: 90%;
         margin: 0 auto;
-        margin-top:0.9rem; 
+        margin-top:1.5rem; 
         display: flex;
         justify-content: space-between
     }
