@@ -2,7 +2,8 @@
     <div class="index">
         <div class="top-title">
             <div class="top-icon">
-                <i class="iconfont icon-caidan" @click = "mask = true"></i> 
+                <!-- <i class="iconfont icon-caidan" @click = "mask = true"></i>  -->
+                <i class="iconfont icon-caidan" @click="SHOW_LOGIN"></i> 
             </div>
             <div class="vant-tabs">
                 <van-tabs v-model="active">
@@ -20,10 +21,11 @@
         </div>
 
             <transition name="mask-show">
-                <div class="left-cover" @click = "mask = false" v-show="mask"></div>
+                <!-- <div class="left-cover" @click = "mask = false" v-show="mask"></div> -->
+                <div class="left-cover" v-show="loginPage" @click="HIDE_LOGIN"></div>
             </transition>
             <transition name=login-show>
-                <div class="left-content" v-show="mask">
+                <div class="left-content" v-show="loginPage">
                     <div class="cover-top">
                         <div class="left-text">登陆网易云音乐</div>
                         <div>手机电脑多端同步，尽享海量高品质音乐</div>
@@ -90,23 +92,14 @@
 <script>
 import find from './find.vue'
 import leftCover from '../views/leftCover.vue'
+import { mapGetters, mapMutations } from 'vuex'
 import $ from 'jquery'
 
-// $(document).ready(function(){
-//     $('.icon-caidan').click(function(){
-//         let t = setTimeout(function(){
-//             $('.left-content').stop().animate({
-//                 left:'0'
-//             },300)
-//         },100)
-//     })
-// })
 
 export default {
     data(){
         return{
-            mask:false,
-            hide:false,
+            // mask:false,
             active:1,
              iconList:[
                 {
@@ -162,7 +155,16 @@ export default {
             ],
         }
     },
+    computed: {
+    ...mapGetters([
+        'loginPage'
+    ])
+  },
     methods:{
+      ...mapMutations([
+          'SHOW_LOGIN',
+          'HIDE_LOGIN'
+        ])
     },
     components:{
         find,

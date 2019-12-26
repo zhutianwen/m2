@@ -1,0 +1,1 @@
+export const loginPage = state => state.loginPage
