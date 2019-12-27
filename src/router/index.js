@@ -4,6 +4,8 @@ import HelloWorld from '@/components/HelloWorld'
 import index from '@/components/index'
 import recommenday from '@/views/recommenday'
 import moreNewdish from '@/views/moreNewdish'
+import moreNewsongs from '@/views/moreNewsongs'
+
 
 
 
@@ -15,5 +17,6 @@ export default new Router({
     {path: '/',name: 'index',component: index},
     {path: '/recommenday',name: 'recommenday',component: recommenday},
     {path: '/moreNewdish',name: 'moreNewdish',component: moreNewdish},
+    {path: '/moreNewsongs',name: 'moreNewsongs',component: moreNewsongs},
   ]
 })

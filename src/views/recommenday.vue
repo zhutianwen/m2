@@ -85,6 +85,12 @@ export default {
     }
     .recommomnd-div3{
         float:right;
-        line-height:1.2rem;   
+        line-height:1.25rem;   
+    }
+    .song-title,.song-author{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 5rem;
     }
 </style>

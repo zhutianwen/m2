@@ -56,7 +56,7 @@ export default {
         },
         getWeekdish(){
             this.$axios.get('/top/album?offset=0').then((res)=>{
-                console.log(res)
+                // console.log(res)
                 this.dishList2 = res.data.albums
             }).catch((err)=>{
                 console.log(err)

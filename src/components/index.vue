@@ -4,7 +4,7 @@
             <div class="top-icon">
                 <i class="iconfont icon-caidan" @click="SHOW_LOGIN"></i> 
             </div>
-            <div class="vant-tabs">
+            <div class="vant-tabs vant1">
                 <van-tabs v-model="active">
                     <van-tab title="我的">内容 1</van-tab>
                     <van-tab title="发现">
@@ -74,13 +74,13 @@ export default {
     .vant-tabs{
         width: 100%
     }
-    .van-tabs__line{
+    .vant1 .van-tabs__line{
        background: none!important;
     }
-    [class*=van-hairline]::after{
+    .vant1 [class*=van-hairline]::after{
        border: 0!important;
     }
-    .van-tab--active{
+    .vant1 .van-tab--active{
         font-weight:bold; 
         -webkit-transform: scale(1.2);
         -moz-transform:scale(1.2);

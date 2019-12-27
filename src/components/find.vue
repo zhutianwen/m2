@@ -55,7 +55,7 @@
                 <div class="more-die" v-show="show" @click="goDish">
                     更多新碟
                 </div>  
-                <div class="more-die" v-show="hide">
+                <div class="more-die" v-show="hide" @click="goNewsong">
                     新歌推荐
                 </div>  
             </div>
@@ -169,6 +169,11 @@ export default {
             this.$router.push({
                 path:'/moreNewdish'
             })
+        },
+        goNewsong(){
+            this.$router.push({
+                path:'/moreNewsongs'
+            })               
         },
         goRecommmond(){
             this.$router.push({

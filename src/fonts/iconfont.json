@@ -412,6 +412,13 @@
       "unicode_decimal": 58895
     },
     {
+      "icon_id": "10252114",
+      "name": "播放",
+      "font_class": "bofang",
+      "unicode": "e78d",
+      "unicode_decimal": 59277
+    },
+    {
       "icon_id": "11391498",
       "name": "歌单",
       "font_class": "gedan",
