@@ -39,6 +39,7 @@
 
 <script>
 export default {
+    name:'chinese',
     data(){
         return{
             chineseList:[],
