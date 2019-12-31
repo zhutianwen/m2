@@ -39,7 +39,7 @@
 
 <script>
 export default {
-    name:'chinese',
+    // name:'chinese',
     data(){
         return{
             chineseList:[],

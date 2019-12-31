@@ -39,7 +39,7 @@
 
 <script>
 export default {
-    name:'korea',
+    // name:'korea',
     data(){
         return{
             koreaList:[],

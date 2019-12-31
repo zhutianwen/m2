@@ -39,7 +39,7 @@
 
 <script>
 export default {
-    name:'america',
+    // name:'america',
     data(){
         return{
             americaList:[],

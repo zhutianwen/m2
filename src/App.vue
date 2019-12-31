@@ -1,10 +1,7 @@
 <template>
   <div id="app">
     <!-- <img src="./assets/logo.png"> -->
-    <keep-alive include="chinese,america,korea,japan">
-        <router-view/>
-    </keep-alive>
-    
+      <router-view/>
   </div>
 </template>
 

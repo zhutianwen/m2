@@ -16,7 +16,9 @@ import Vant from 'vant';
 import 'vant/lib/index.css';
 Vue.use(Vant);
 
-
+//引入ly-tab组件
+import LyTab from 'ly-tab'
+Vue.use(LyTab)
 
 
 

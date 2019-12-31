@@ -11,7 +11,7 @@
                 <i class="iconfont icon1 icon-meirituijian"></i>
                 <div class="fen-lei-title">每日推荐</div>
             </div>
-            <div class="fen-lei-content">
+            <div class="fen-lei-content" @click="goSongsheet">
                 <i class="iconfont icon1 icon-gedan"></i>
                 <div class="fen-lei-title">歌单</div>
             </div>
@@ -179,7 +179,12 @@ export default {
             this.$router.push({
                 path:'/recommenday'
             })
-        }  
+        },
+        goSongsheet(){
+            this.$router.push({
+                path:"/songSheet"
+            })
+        },  
     }
 }
 </script>
