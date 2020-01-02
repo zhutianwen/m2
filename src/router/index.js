@@ -2,6 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import index from '@/components/index'
+import login from '@/components/login'
+import phone from '@/components/phone'
+import password from '@/components/password'
 import recommenday from '@/views/recommenday'
 import moreNewdish from '@/views/moreNewdish'
 import moreNewsongs from '@/views/moreNewsongs'
@@ -15,17 +18,22 @@ import minyao from '@/views/songSheet/minyao'
 import hanyu from '@/views/songSheet/hanyu'
 import riyu from '@/views/songSheet/riyu'
 
+import paihangbang from '@/views/paihangbang'
 
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    {path: '/login',name: 'login',component: login},
+    {path: '/password',name: 'password',component: password},
+    {path: '/phone',name: 'phone',component: phone},
     {path:'/',redirect:'/index',components:index},
     {path: '/index',name: 'index',component: index},
     {path: '/recommenday',name: 'recommenday',component: recommenday},
     {path: '/moreNewdish',name: 'moreNewdish',component: moreNewdish},
     {path: '/moreNewsongs',name: 'moreNewsongs',component: moreNewsongs},
+    {path: '/paihangbang',name: 'paihangbang',component: paihangbang},
    
     {
       path: '/songSheet',

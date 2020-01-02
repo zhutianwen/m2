@@ -18,6 +18,19 @@ const mutations = {
         document.body.style.overflow='';//出现滚动条
         document.removeEventListener("touchmove",{ passive: false },mo,false);
       },
+      
+      [types.SET_USER_ID ](state,userId){
+        state.userId = userId
+      },
+      [types.SET_USER_NAME ](state,username){
+          state.username = username
+      },
+      [types.SET_AVATAR_URL](state,avatarUrl){
+          state.avatarUrl = avatarUrl
+      },
+      [types.SET_IS_LOGIN ](state,isLogin){
+          state.isLogin = isLogin
+      },
 }
 export default mutations
   

@@ -37,12 +37,12 @@ export default {
         }
     },
     methods:{
-        SHOW_LOGIN(){
-            console.log(454454)
-            var mo=function(e){e.preventDefault();};
-            cument.body.style.overflow='hidden';
-            document.addEventListener("touchmove",{ passive: false },mo,false);//禁止页面滑动
-        },
+        // SHOW_LOGIN(){
+        //     console.log(454454)
+        //     var mo=function(e){e.preventDefault();};
+        //     cument.body.style.overflow='hidden';
+        //     document.addEventListener("touchmove",{ passive: false },mo,false);//禁止页面滑动
+        // },
       ...mapMutations([
           'SHOW_LOGIN',
         ])

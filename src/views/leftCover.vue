@@ -1,15 +1,30 @@
 <template>
     <div>
         <transition name="mask-show">
-            <div class="left-cover" v-show="loginPage" @click="HIDE_LOGIN"></div>
+            <!-- <div class="left-cover" v-show="loginPage" @click="HIDE_LOGIN"></div> -->
+            <div class="left-cover" v-show="loginPage" @click="hideLogin"></div>
         </transition>
         <transition name=login-show>
             <div class="left-content" v-show="loginPage">
-                <div class="cover-top">
+                <div class="cover-top" v-if="!isLogin">
                     <div class="left-text">登陆网易云音乐</div>
                     <div>手机电脑多端同步，尽享海量高品质音乐</div>
-                    <div class="btn-login">立即登录</div>
+                    <div class="btn-login" @click="goLogin">立即登录</div>
                     <div style="padding-bottom:0.9rem;"></div>
+                </div>
+                <div class="cover-top" v-if="isLogin">
+                    <div class="avatarImg">
+                        <img v-lazy="avatarUrl" alt="">
+                    </div>
+                    <div class="user-name">
+                        <div>
+                            <span>{{username}}</span>
+                            <em>Lv 8</em>
+                        </div>
+                        <div class="sign-in">
+                            <span>签到</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="cover-bottom">
                     <div class="left-menu">
@@ -56,7 +71,7 @@
                             <span class="iconfont icon-shezhi"></span>
                             <span class="icon-text3">设置</span>
                         </div>
-                        <div>
+                        <div @click="logout">
                             <span class="iconfont icon-tuichu"></span>
                             <span class="icon-text3">退出</span>
                         </div>
@@ -128,13 +143,37 @@ export default {
     },
     computed: {
         ...mapGetters([
-            'loginPage'
+            'loginPage',
+            'username',
+            'avatarUrl',
+            'isLogin'
         ])
     },
     methods:{
-      ...mapMutations([
-          'HIDE_LOGIN'
-        ])
+    //   ...mapMutations([
+    //       'HIDE_LOGIN',
+    //     ]),
+    ...mapMutations({
+        hideLogin:'HIDE_LOGIN',
+        setIsLogin: 'SET_IS_LOGIN',
+    }),
+        goLogin(){
+            this.hideLogin();
+            this.$router.push({
+                path:'/login'
+            })
+        },
+        logout(){
+            this.$axios.get('/logout').then((res)=>{
+                // console.log(res,'??????')
+                if(res.data.code==200){
+                    sessionStorage.removeItem("store");
+                    this.setIsLogin(false)
+                }
+            }).catch((err)=>{
+                console.log(err)
+            })
+        },
     },
 }
 </script>
@@ -172,6 +211,30 @@ export default {
         text-align: center;
         color: #847f7f;
         background: #cccccc4d;
+    }
+    .avatarImg{
+        width:25%;
+        padding-top: 0.65rem;
+        padding-left: 0.5rem;
+    }
+    .avatarImg img{
+        border-radius: 50%;
+    }
+    .user-name{
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 0.4rem;
+        padding-bottom: 1.3rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    .sign-in{
+        color: #fff;
+        background: #f02c2c;
+        width: 25%;
+        height: 0.7rem;
+        line-height: 0.7rem;
+        border-radius: 15px;
     }
     .left-text{
         padding-top:0.9rem; 

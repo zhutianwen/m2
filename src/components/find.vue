@@ -15,13 +15,13 @@
                 <i class="iconfont icon1 icon-gedan"></i>
                 <div class="fen-lei-title">歌单</div>
             </div>
-            <div class="fen-lei-content">
+            <div class="fen-lei-content" @click="goPaihang">
                 <i class="iconfont icon1 icon-paihangbang"></i>
                 <div class="fen-lei-title">排行榜</div>
             </div>
             <div class="fen-lei-content">
-                <i class="iconfont icon1 icon-zhibobofangshexiangjiguankanxianxing"></i>
-                <div class="fen-lei-title">直播</div>
+                <i class="iconfont icon1 icon-diantai"></i>
+                <div class="fen-lei-title">电台</div>
             </div>  
         </div>
         <!--  -->
@@ -30,7 +30,7 @@
         <div class="recommend-songs">
             <div class="recommend-title">
                 <div class="tuijian-gedan">推荐歌单</div>
-                <div class="song-square">歌单广场</div>
+                <div class="song-square" @click="goSongsheet">歌单广场</div>
             </div>
             <div class="recommend-items">
                 <div class="recommend-div" v-for="item in recommendLisr" :key="item.id">
@@ -184,7 +184,17 @@ export default {
             this.$router.push({
                 path:"/songSheet"
             })
+        },
+        goSongsheet(){
+            this.$router.push({
+                path:"/songSheet"
+            })
         },  
+        goPaihang(){
+            this.$router.push({
+                path:'/paihangbang'
+            })
+        },
     }
 }
 </script>
