@@ -167,13 +167,34 @@ export default {
             this.$axios.get('/logout').then((res)=>{
                 // console.log(res,'??????')
                 if(res.data.code==200){
-                    sessionStorage.removeItem("store");
-                    this.setIsLogin(false)
+                    sessionStorage.removeItem("store")
+                    this.$router.push("/login")
+        
+                    //顺序不能反，且两个中的任何一个都不能少
+                    window.location.reload()
+                    sessionStorage.setItem("store", null)
                 }
             }).catch((err)=>{
                 console.log(err)
             })
         },
+    //     logout: function() {
+    //     this.$confirm("确认退出吗?", "提示", {
+    //       type: "warning"
+    //     }).then(() => {
+    //         this.$store.state.tab.mainTabs=[];
+    //         sessionStorage.removeItem("user")
+    //         this.$router.push("/login")
+ 
+    //         //顺序不能反，且两个中的任何一个都不能少
+    //         window.location.reload()
+    //         sessionStorage.setItem("store", null)
+ 
+    //         this.$api.login.logout().then((res) => {
+    //         }).catch(function(res) {
+    //         }) }).catch(() => {})
+    //   }
+
     },
 }
 </script>
