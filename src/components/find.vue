@@ -19,7 +19,7 @@
                 <i class="iconfont icon1 icon-paihangbang"></i>
                 <div class="fen-lei-title">排行榜</div>
             </div>
-            <div class="fen-lei-content">
+            <div class="fen-lei-content" @click="goDiantai">
                 <i class="iconfont icon1 icon-diantai"></i>
                 <div class="fen-lei-title">电台</div>
             </div>  
@@ -193,6 +193,11 @@ export default {
         goPaihang(){
             this.$router.push({
                 path:'/paihangbang'
+            })
+        },
+        goDiantai(){
+            this.$router.push({
+                path:'/diantai'
             })
         },
     }

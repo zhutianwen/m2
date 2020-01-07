@@ -62,6 +62,27 @@
       "unicode_decimal": 59009
     },
     {
+      "icon_id": "603465",
+      "name": "博士帽",
+      "font_class": "boshimao-copy",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "662182",
+      "name": "笑脸",
+      "font_class": "smile-16",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "706202",
+      "name": "奶瓶",
+      "font_class": "naiping",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
       "icon_id": "792343",
       "name": "moon-月亮",
       "font_class": "moonyueliang",
@@ -90,6 +111,13 @@
       "unicode_decimal": 58959
     },
     {
+      "icon_id": "1073415",
+      "name": "分类",
+      "font_class": "fenlei",
+      "unicode": "e646",
+      "unicode_decimal": 58950
+    },
+    {
       "icon_id": "1125525",
       "name": "夜间模式",
       "font_class": "light",
@@ -102,6 +130,13 @@
       "font_class": "duoxuan",
       "unicode": "e61b",
       "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "1373526",
+      "name": "排行",
+      "font_class": "paixing",
+      "unicode": "e6a0",
+      "unicode_decimal": 59040
     },
     {
       "icon_id": "1387974",
@@ -118,11 +153,32 @@
       "unicode_decimal": 59008
     },
     {
+      "icon_id": "1654616",
+      "name": "扇子",
+      "font_class": "shanzi",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "1746494",
+      "name": "话筒",
+      "font_class": "huatong",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
       "icon_id": "1761483",
       "name": "剪刀",
       "font_class": "jiandao",
       "unicode": "e641",
       "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "1781048",
+      "name": "书",
+      "font_class": "shu1",
+      "unicode": "e6a1",
+      "unicode_decimal": 59041
     },
     {
       "icon_id": "1857022",
@@ -144,6 +200,13 @@
       "font_class": "fuxuankuang",
       "unicode": "e748",
       "unicode_decimal": 59208
+    },
+    {
+      "icon_id": "2637531",
+      "name": "Q表情",
+      "font_class": "Qbiaoqing",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
     },
     {
       "icon_id": "2672194",
@@ -181,6 +244,20 @@
       "unicode_decimal": 58909
     },
     {
+      "icon_id": "2970550",
+      "name": "外语",
+      "font_class": "waiyu",
+      "unicode": "e7a6",
+      "unicode_decimal": 59302
+    },
+    {
+      "icon_id": "3004207",
+      "name": "耳机 (1)",
+      "font_class": "erji1",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
       "icon_id": "3274883",
       "name": "菜单",
       "font_class": "caidan",
@@ -202,6 +279,13 @@
       "unicode_decimal": 58903
     },
     {
+      "icon_id": "3527906",
+      "name": "书 (1)",
+      "font_class": "shu",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
       "icon_id": "3589644",
       "name": "定时",
       "font_class": "dingshi",
@@ -216,6 +300,13 @@
       "unicode_decimal": 58911
     },
     {
+      "icon_id": "4138307",
+      "name": "播放 开始 视频 圆形 线性",
+      "font_class": "bofangkaishishipinyuanxingxianxing",
+      "unicode": "e8dd",
+      "unicode_decimal": 59613
+    },
+    {
       "icon_id": "4166110",
       "name": "音响",
       "font_class": "yinxiang",
@@ -228,6 +319,13 @@
       "font_class": "hudun",
       "unicode": "e63d",
       "unicode_decimal": 58941
+    },
+    {
+      "icon_id": "4235720",
+      "name": "飞机",
+      "font_class": "feiji",
+      "unicode": "e92b",
+      "unicode_decimal": 59691
     },
     {
       "icon_id": "4475016",
@@ -256,6 +354,13 @@
       "font_class": "checked",
       "unicode": "e746",
       "unicode_decimal": 59206
+    },
+    {
+      "icon_id": "5395172",
+      "name": "音乐",
+      "font_class": "yinyue_active",
+      "unicode": "e609",
+      "unicode_decimal": 58889
     },
     {
       "icon_id": "5495317",
@@ -293,11 +398,32 @@
       "unicode_decimal": 59010
     },
     {
+      "icon_id": "6890784",
+      "name": "点灯",
+      "font_class": "diandeng",
+      "unicode": "e660",
+      "unicode_decimal": 58976
+    },
+    {
       "icon_id": "7040499",
       "name": "每日推荐",
       "font_class": "meirituijian",
       "unicode": "e601",
       "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "7088650",
+      "name": "换一换",
+      "font_class": "huanyihuan",
+      "unicode": "e6da",
+      "unicode_decimal": 59098
+    },
+    {
+      "icon_id": "7189221",
+      "name": "股市行情",
+      "font_class": "gushihangqing",
+      "unicode": "e662",
+      "unicode_decimal": 58978
     },
     {
       "icon_id": "7429922",
@@ -349,6 +475,13 @@
       "unicode_decimal": 58900
     },
     {
+      "icon_id": "8323017",
+      "name": "笑脸",
+      "font_class": "xiaolian",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
       "icon_id": "8498644",
       "name": "关  闭",
       "font_class": "guanbi",
@@ -370,11 +503,25 @@
       "unicode_decimal": 58894
     },
     {
+      "icon_id": "8971399",
+      "name": "热门",
+      "font_class": "remen",
+      "unicode": "e64e",
+      "unicode_decimal": 58958
+    },
+    {
       "icon_id": "9016590",
       "name": "冰棒",
       "font_class": "bingbang",
       "unicode": "e60a",
       "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "9295491",
+      "name": "精品",
+      "font_class": "jingpin",
+      "unicode": "e67d",
+      "unicode_decimal": 59005
     },
     {
       "icon_id": "9355355",
@@ -391,11 +538,25 @@
       "unicode_decimal": 58948
     },
     {
+      "icon_id": "9541608",
+      "name": "书",
+      "font_class": "shu2",
+      "unicode": "e691",
+      "unicode_decimal": 59025
+    },
+    {
       "icon_id": "9750851",
       "name": "微信",
       "font_class": "weixin",
       "unicode": "e63c",
       "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "9856558",
+      "name": "问号",
+      "font_class": "wenhao",
+      "unicode": "e73d",
+      "unicode_decimal": 59197
     },
     {
       "icon_id": "9935214",
@@ -419,11 +580,32 @@
       "unicode_decimal": 59277
     },
     {
+      "icon_id": "11121308",
+      "name": "主播对比",
+      "font_class": "zhuboduibi",
+      "unicode": "e67e",
+      "unicode_decimal": 59006
+    },
+    {
       "icon_id": "11391498",
       "name": "歌单",
       "font_class": "gedan",
       "unicode": "e636",
       "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "11833363",
+      "name": "科学",
+      "font_class": "kexue",
+      "unicode": "e6e4",
+      "unicode_decimal": 59108
+    },
+    {
+      "icon_id": "11929290",
+      "name": "人文历史",
+      "font_class": "renwenlishi",
+      "unicode": "e671",
+      "unicode_decimal": 58993
     }
   ]
 }

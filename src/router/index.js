@@ -8,6 +8,7 @@ import password from '@/components/password'
 import recommenday from '@/views/recommenday'
 import moreNewdish from '@/views/moreNewdish'
 import moreNewsongs from '@/views/moreNewsongs'
+import diantai from '@/views/diantai'
 import songSheet from '@/views/songSheet'
 
 import tuijian from '@/views/songSheet/tuijian'
@@ -34,7 +35,7 @@ export default new Router({
     {path: '/moreNewdish',name: 'moreNewdish',component: moreNewdish},
     {path: '/moreNewsongs',name: 'moreNewsongs',component: moreNewsongs},
     {path: '/paihangbang',name: 'paihangbang',component: paihangbang},
-   
+    {path: '/diantai',name: 'diantai',component: diantai},
     {
       path: '/songSheet',
       name:'songSheet',
