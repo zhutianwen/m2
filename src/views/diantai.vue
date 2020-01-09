@@ -22,7 +22,7 @@
                 <i class="iconfont icon-fenlei"></i>
                 <span>电台分类</span>
             </div>
-            <div class="diantai-div">
+            <div class="diantai-div" @click="goDjpai">
                 <i class="iconfont icon-paixing"></i>
                 <span>电台排行</span>
             </div>
@@ -386,16 +386,8 @@
             <div class="hot-fenlei-title">
                 热门分类
             </div>
-            <div class="fenlei-item">
-                <div>
-                    <span class="iconfont icon-vynil"></span>
-                    <span>创作|翻唱</span>
-                </div>
-                <div>
-                    <span class="iconfont icon-erji1"></span>
-                    <span>3D|电子</span>
-                </div>
-            </div>
+           
+            
         </div>
     </div>
 </template>
@@ -453,10 +445,10 @@ export default {
     methods:{
         // 转换数字
         transNumber(num,point){
-           var numStr = num.toString()  
+           var numStr = num.toString() 
             // 十万以内直接返回
             if (numStr.length < 6) {
-            return numStr;
+                return numStr;
             }
              //大于8位数是亿
             else if (numStr.length > 8) {
@@ -631,6 +623,11 @@ export default {
                 this.cityList = res.data.djRadios
             }).catch((err)=>{
                 console.log(err)
+            })
+        },
+        goDjpai(){
+            this.$router.push({
+                path:'/djpaihang'
             })
         },
         dJbanner(){
@@ -860,14 +857,6 @@ export default {
     .hot-fenlei-title{
         font-size: 0.45rem;
         font-weight: bold;
-    }
-    .fenlei-item{
-        display: flex;
-        justify-content: space-between;
-        width: 85%;
-        margin: 0 auto;
-        margin-top: 0.7rem;
-        border-top: 1px solid #e9ebdd;
     }
 </style>
 

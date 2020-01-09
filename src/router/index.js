@@ -10,6 +10,8 @@ import moreNewdish from '@/views/moreNewdish'
 import moreNewsongs from '@/views/moreNewsongs'
 import diantai from '@/views/diantai'
 import songSheet from '@/views/songSheet'
+import djpaihang from '@/views/djpaihang'
+import hours from '@/views/djPhbang/hours'
 
 import tuijian from '@/views/songSheet/tuijian'
 import huayu from '@/views/songSheet/huayu'
@@ -36,6 +38,8 @@ export default new Router({
     {path: '/moreNewsongs',name: 'moreNewsongs',component: moreNewsongs},
     {path: '/paihangbang',name: 'paihangbang',component: paihangbang},
     {path: '/diantai',name: 'diantai',component: diantai},
+    {path: '/djpaihang',name: 'djpaihang',component: djpaihang},
+    {path: '/hours',name: 'hours',component: hours},
     {
       path: '/songSheet',
       name:'songSheet',
