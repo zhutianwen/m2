@@ -12,6 +12,8 @@ import diantai from '@/views/diantai'
 import songSheet from '@/views/songSheet'
 import djpaihang from '@/views/djpaihang'
 import hours from '@/views/djPhbang/hours'
+import fufei from '@/views/djPhbang/fufei'
+import jingp from '@/views/djPhbang/jingp'
 
 import tuijian from '@/views/songSheet/tuijian'
 import huayu from '@/views/songSheet/huayu'
@@ -40,6 +42,8 @@ export default new Router({
     {path: '/diantai',name: 'diantai',component: diantai},
     {path: '/djpaihang',name: 'djpaihang',component: djpaihang},
     {path: '/hours',name: 'hours',component: hours},
+    {path: '/fufei',name: 'fufei',component: fufei},
+    {path: '/jingp',name: 'jingp',component: jingp},
     {
       path: '/songSheet',
       name:'songSheet',

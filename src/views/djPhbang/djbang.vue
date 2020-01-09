@@ -1,7 +1,7 @@
 <template>
     <div class="djbang">
          <div class="dj-top">
-            <div class="hour">24小时榜 ></div>
+            <div class="hour" @click="goJing">24小时榜 ></div>
             <div class="hour-div">
                 <div class="hour-con" v-for="(item,index) in djList" :key="index">
                     <img v-lazy="item.picUrl" alt="">
@@ -85,6 +85,11 @@ export default {
                 // console.log(this.diantai)
             }).catch((err)=>{
                 console.log(err)
+            })
+        },
+        goJing(){
+            this.$router.push({
+                path:'/jingp'
             })
         },
     }

@@ -482,6 +482,13 @@
       "unicode_decimal": 58901
     },
     {
+      "icon_id": "8333485",
+      "name": "NEW",
+      "font_class": "NEW",
+      "unicode": "e7f5",
+      "unicode_decimal": 59381
+    },
+    {
       "icon_id": "8498644",
       "name": "关  闭",
       "font_class": "guanbi",

@@ -2,9 +2,8 @@
     <div class="new-people">
         <div class="hours-top">
            <span class="iconfont icon-zuojiantou" @click="prev"></span>
-           <span class="newPeople">24小时新人榜</span> 
+           <span class="newPeople">付费精品榜</span> 
         </div>
-        
         <div style="margin-top:1.5rem;font-size:0.4rem;font-weight:bold;padding-left: 0.5rem;">
             更新时间 : {{updateTime | timeData}}
         </div>
@@ -15,23 +14,17 @@
                     <div class="new">NEW</div>
                 </div> 
                 <div class="li-list1">
-                    <img v-lazy="item.program.coverUrl" alt="">
+                    <img v-lazy="item.picUrl" alt="">
                 </div>
                 <div class="li-list2">
-                    <div class="chuangzuo-name">{{item.program.name}}</div>
+                    <div class="chuangzuo-name">{{item.name}}</div>
                     <div class="dec">
-                        <span class="dec-img">
-                            <img v-lazy="item.program.coverUrl" alt="">
-                        </span>
-                        <span>{{item.program.mainSong.artists[0].name}} |</span>
-                        <span>
+                        <span>{{item.creatorName}}</span>
+                        <span style="display:block">
                             <span class="iconfont icon-remen"></span>
                             <span>{{ transNumber(item.score,1) }}</span>
                         </span>
                     </div>
-                </div>
-                <div class="li-list3">
-                    <i class="iconfont icon-bofangkaishishipinyuanxingxianxing"></i>
                 </div>
             </div>
         </div>
@@ -85,7 +78,7 @@ export default {
             this.$router.go(-1)
         },
         getHour(){
-            this.$axios.get('/dj/program/toplist/hours?limit=100').then((res)=>{
+            this.$axios.get('/dj/toplist/pay').then((res)=>{
                 this.jiemuList = res.data.data.list
                 this.updateTime = res.data.data.updateTime
                 // console.log(res)
@@ -127,7 +120,7 @@ export default {
         align-items: center;
     }
     .li-list1{
-        width: 17%;
+        width: 25%;
     }
     .li-list1 img{
         border-radius: 8px;
@@ -146,13 +139,6 @@ export default {
         font-size: 0.35rem;
         color: #848282;
         margin-top: 0.2rem;
-    }
-    .dec-img{
-        display: inline-block;
-        width: 12%;
-    }
-    .dec-img img{
-        border-radius: 50%;
     }
     .icon-bofangkaishishipinyuanxingxianxing{
         font-size: 0.9rem;

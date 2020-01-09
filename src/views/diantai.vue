@@ -26,7 +26,7 @@
                 <i class="iconfont icon-paixing"></i>
                 <span>电台排行</span>
             </div>
-            <div class="diantai-div">
+            <div class="diantai-div" @click="goFufei">
                 <i class="iconfont icon-jingpin"></i>
                 <span>付费精品</span>
             </div>
@@ -628,6 +628,11 @@ export default {
         goDjpai(){
             this.$router.push({
                 path:'/djpaihang'
+            })
+        },
+        goFufei(){
+            this.$router.push({
+                path:'/fufei'
             })
         },
         dJbanner(){
